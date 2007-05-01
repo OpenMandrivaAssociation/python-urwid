@@ -1,15 +1,15 @@
 %define module_name urwid
+%define rel 1
 
 Summary:    Python library to write console user interface library 
 Name: 		python-%{module_name}
-Version: 	0.9.7.1
-Release: 	%mkrel 2
+Version: 	0.9.8
+Release: 	%mkrel %rel
 Source0: 	http://excess.org/%{module_name}/%{module_name}-%{version}.tar.bz2
 License:	LGPL
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Url: 		http://excess.org/%{module_name}
-BuildArch:  noarch
 BuildRequires: python-devel
 
 %description
@@ -46,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc  *html *py 
-%dir %py_puresitedir/%module_name
+%dir %py_platsitedir/%module_name
 
 
