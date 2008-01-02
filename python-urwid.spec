@@ -8,6 +8,7 @@ Release: 	%mkrel %rel
 Source0: 	http://excess.org/%{module_name}/%{module_name}-%{version}.tar.bz2
 License:	LGPL
 Group: 		Development/Python
+BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Url: 		http://excess.org/%{module_name}
 BuildRequires: python-devel
 
