@@ -13,7 +13,6 @@ Url: 		http://excess.org/%{module_name}
 BuildRequires: python-devel
 
 %description
-
 Urwid is a console user interface library. It includes many features 
 useful for text console application developers including :
 
