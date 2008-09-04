@@ -1,9 +1,9 @@
 %define module_name urwid
-%define rel 2
+%define rel 1
 
-Summary:    Python library to write console user interface library 
+Summary:    Python library to write console user interface library
 Name: 		python-%{module_name}
-Version: 	0.9.8
+Version: 	0.9.8.3
 Release: 	%mkrel %rel
 Source0: 	http://excess.org/%{module_name}/%{module_name}-%{version}.tar.bz2
 License:	LGPL
@@ -13,7 +13,7 @@ Url: 		http://excess.org/%{module_name}
 BuildRequires: python-devel
 
 %description
-Urwid is a console user interface library. It includes many features 
+Urwid is a console user interface library. It includes many features
 useful for text console application developers including :
 
     * Fluid interface resizing (xterm window resizing / fbset on Linux console)
@@ -27,7 +27,7 @@ useful for text console application developers including :
     * Flexible edit box for editing many different types of text
     * Buttons, check boxes and radio boxes
     * Customizable layout for all widgets
-    * Easy interface for creating HTML screen shots 
+    * Easy interface for creating HTML screen shots
 
 %prep
 %setup -q -n %{module_name}-%version
@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
-%doc  *html *py 
+%doc  *html *py
 %dir %py_platsitedir/%module_name
 
 
