@@ -3,9 +3,9 @@
 
 Summary:    Python library to write console user interface library
 Name: 		python-%{module_name}
-Version: 	0.9.8.3
+Version: 	0.9.8.4
 Release: 	%mkrel %rel
-Source0: 	http://excess.org/%{module_name}/%{module_name}-%{version}.tar.bz2
+Source0: 	http://excess.org/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
