@@ -1,5 +1,5 @@
 %define module_name urwid
-%define rel 1
+%define rel 2
 
 Summary:    Python library to write console user interface library
 Name: 		python-%{module_name}
