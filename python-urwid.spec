@@ -1,7 +1,7 @@
 %define module	urwid
 %define name	python-%{module}
 %define version	0.9.9.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Python library to write console user interface library
 Name: 		%{name}
