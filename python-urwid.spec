@@ -1,7 +1,7 @@
 %define module	urwid
 %define name	python-%{module}
 %define version	0.9.9.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Python library to write console user interface library
 Name: 		%{name}
@@ -12,7 +12,7 @@ License:	LGPL
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Url: 		http://excess.org/%{module_name}
-%py_requires -d
+BuildRequires:	python-devel
 
 %description
 Urwid is a console user interface library. It includes many features
@@ -35,19 +35,17 @@ useful for text console application developers including :
 %setup -q -n %{module}-%{version}
 
 %build
+%setup_compile_flags
 %__python setup.py build
 
 %install
 %__rm -rf %{buildroot}
 %__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
-%__rm -f setup.py
 
 %clean
 %__rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
 %doc  *html *py
-%dir %py_platsitedir/%{module}
-
-
+%py_platsitedir/*
