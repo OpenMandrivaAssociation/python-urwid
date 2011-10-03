@@ -1,9 +1,9 @@
 %define module	urwid
 %define name	python-%{module}
-%define version	0.9.9.1
-%define release %mkrel 3
+%define version	1.0.0
+%define release %mkrel 1
 
-Summary:	Python library to write console user interface library
+Summary:	Full-featured Python console user interface library
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
@@ -18,18 +18,20 @@ BuildRequires:	python-devel
 Urwid is a console user interface library. It includes many features
 useful for text console application developers including :
 
-* Fluid interface resizing (xterm window resizing / fbset on Linux console)
-* Web application display mode using Apache and CGI [Live Demo]
+* Applcations resize quickly and smoothly
+* Automatic, programmable text alignment and wrapping
+* Simple markup for setting text attributes within blocks of text
+* Powerful list box with programmable content for scrolling all
+  widget types
+* Your choice of event loops: Twisted, Glib or built-in
+  select-based loop
+* Pre-built widgets include edit boxes, buttons, check
+  boxes and radio buttons
+* Display modules include raw, curses, and
+  experimental LCD and web displays
 * Support for UTF-8, simple 8-bit and CJK encodings
-* Multiple text alignment and wrapping modes built-in
-* Ability create user-defined text layout classes
-* Simple markup for setting text attributes
-* Powerful list box that handles scrolling between different widget types
-* List box contents may be managed with a user-defined class
-* Flexible edit box for editing many different types of text
-* Buttons, check boxes and radio boxes
-* Customizable layout for all widgets
-* Easy interface for creating HTML screen shots
+* 256 and 88 color mode support
+* Python 3.2 support
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -40,12 +42,12 @@ useful for text console application developers including :
 
 %install
 %__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
 
 %clean
 %__rm -rf %{buildroot}
 
-%files
+%files -f FILE_LIST
 %defattr(-,root,root)
-%doc  *html *py
+%doc CHANGELOG  *html *py
 %py_platsitedir/*
