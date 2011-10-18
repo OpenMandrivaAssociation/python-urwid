@@ -1,7 +1,7 @@
 %define module	urwid
 %define name	python-%{module}
 %define version	1.0.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Full-featured Python console user interface library
 Name: 		%{name}
@@ -12,6 +12,7 @@ License:	LGPL
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Url: 		http://excess.org/%{module}
+BuildRequires:	python-setuptools
 BuildRequires:	python-devel
 
 %description
