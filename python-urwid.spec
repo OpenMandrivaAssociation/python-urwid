@@ -1,7 +1,7 @@
 %define module	urwid
 %define name	python-%{module}
-%define version	1.0.0
-%define release %mkrel 3
+%define version	1.0.1
+%define release %mkrel 1
 
 Summary:	Full-featured Python console user interface library
 Name: 		%{name}
