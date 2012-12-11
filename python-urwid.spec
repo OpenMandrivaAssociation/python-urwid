@@ -1,7 +1,7 @@
 %define module	urwid
 %define name	python-%{module}
-%define version	1.0.1
-%define release %mkrel 1
+%define version	1.1.1
+%define release 1
 
 Summary:	Full-featured Python console user interface library
 Name: 		%{name}
@@ -10,7 +10,6 @@ Release: 	%{release}
 Source0: 	http://excess.org/%{module}/%{module}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Url: 		http://excess.org/%{module}
 BuildRequires:	python-setuptools
 BuildRequires:	python-devel
@@ -42,13 +41,10 @@ useful for text console application developers including :
 %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE=  %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+sed -i 's/.*egg-info$//' FILE_LIST
 
-%clean
-%__rm -rf %{buildroot}
-
-%files -f FILE_LIST
-%defattr(-,root,root)
-%doc CHANGELOG  *html *py
+%files 
+#-f FILE_LIST
+%doc CHANGELOG  *py
 %py_platsitedir/*
