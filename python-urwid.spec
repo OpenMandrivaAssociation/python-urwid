@@ -1,13 +1,10 @@
 %define module	urwid
-%define name	python-%{module}
-%define version	1.1.1
-%define release 1
 
 Summary:	Full-featured Python console user interface library
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
-Source0: 	http://excess.org/%{module}/%{module}-%{version}.tar.gz
+Name: 		python-%{module}
+Version: 	1.2.0
+Release: 	1
+Source0: 	https://pypi.python.org/packages/source/u/urwid/urwid-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
 Url: 		http://excess.org/%{module}
@@ -48,3 +45,4 @@ sed -i 's/.*egg-info$//' FILE_LIST
 #-f FILE_LIST
 %doc CHANGELOG  *py
 %py_platsitedir/*
+
