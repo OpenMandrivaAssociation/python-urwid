@@ -43,6 +43,6 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 %files 
 #-f FILE_LIST
-%doc CHANGELOG  *py
+%doc   *py
 %py_platsitedir/*
 
