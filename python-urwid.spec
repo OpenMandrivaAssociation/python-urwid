@@ -1,8 +1,9 @@
 %define module	urwid
 
 Summary:	Full-featured Python console user interface library
+
 Name: 		python-%{module}
-Version: 	1.2.0
+Version: 	1.2.1
 Release: 	1
 Source0: 	https://pypi.python.org/packages/source/u/urwid/urwid-%{version}.tar.gz
 License:	LGPL
@@ -44,5 +45,6 @@ sed -i 's/.*egg-info$//' FILE_LIST
 %files 
 #-f FILE_LIST
 %doc   *py
-%py_platsitedir/*
+%{py_platsitedir}/*
+
 
