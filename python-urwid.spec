@@ -39,12 +39,10 @@ useful for text console application developers including :
 %__python setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE=  %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-sed -i 's/.*egg-info$//' FILE_LIST
+PYTHONDONTWRITEBYTECODE=  %__python setup.py install --root=%{buildroot}
 
 %files 
-#-f FILE_LIST
-%doc   *py
 %{py_platsitedir}/*
+
 
 
