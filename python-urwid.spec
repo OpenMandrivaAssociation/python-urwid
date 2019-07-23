@@ -3,9 +3,9 @@
 Summary:	Full-featured Python console user interface library
 
 Name: 		python-%{module}
-Version: 	1.2.1
-Release: 	2
-Source0: 	https://pypi.python.org/packages/source/u/urwid/urwid-%{version}.tar.gz
+Version:	2.0.1
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/c7/90/415728875c230fafd13d118512bde3184d810d7bf798a631abc05fac09d0/urwid-2.0.1.tar.gz
 License:	LGPL
 Group: 		Development/Python
 Url: 		http://excess.org/%{module}
