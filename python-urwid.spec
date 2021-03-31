@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 %define module	urwid
 
 Summary:	Full-featured Python console user interface library
