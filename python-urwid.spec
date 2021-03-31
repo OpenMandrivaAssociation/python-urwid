@@ -3,14 +3,14 @@
 Summary:	Full-featured Python console user interface library
 
 Name: 		python-%{module}
-Version:	2.0.1
+Version:	2.1.2
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/c7/90/415728875c230fafd13d118512bde3184d810d7bf798a631abc05fac09d0/urwid-2.0.1.tar.gz
+Source0:	https://pypi.org/packages/source/u/urwid/%{name}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
-Url: 		http://excess.org/%{module}
-BuildRequires:	python-setuptools
-BuildRequires:	python-devel
+Url: 		http://urwid.org
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	pkgconfig(python)
 
 %description
 Urwid is a console user interface library. It includes many features
@@ -43,6 +43,3 @@ PYTHONDONTWRITEBYTECODE=  %__python setup.py install --root=%{buildroot}
 
 %files 
 %{py_platsitedir}/*
-
-
-
