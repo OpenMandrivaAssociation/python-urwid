@@ -6,7 +6,7 @@ Summary:	Full-featured Python console user interface library
 
 Name: 		python-%{module}
 Version:	2.1.2
-Release:	1
+Release:	2
 Source0:	https://pypi.org/packages/source/u/urwid/%{module}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
