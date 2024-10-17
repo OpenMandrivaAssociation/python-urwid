@@ -10,7 +10,7 @@ Release:	1
 Source0:	https://pypi.org/packages/source/u/urwid/%{module}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
-Url: 		http://urwid.org
+Url: 		https://urwid.org
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	pkgconfig(python)
 
