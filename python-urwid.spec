@@ -11,6 +11,8 @@ Source0:	https://pypi.org/packages/source/u/urwid/%{module}-%{version}.tar.gz
 License:	LGPL
 Group: 		Development/Python
 Url: 		https://urwid.org
+
+BuildSystem:  python
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	pkgconfig(python)
 
@@ -33,15 +35,5 @@ useful for text console application developers including :
 * 256 and 88 color mode support
 * Python 3.2 support
 
-%prep
-%setup -q -n %{module}-%{version}
-
-%build
-%setup_compile_flags
-%__python setup.py build
-
-%install
-PYTHONDONTWRITEBYTECODE=  %__python setup.py install --root=%{buildroot}
-
 %files 
-%{py_platsitedir}/*
+%{py_sitedir}/*
