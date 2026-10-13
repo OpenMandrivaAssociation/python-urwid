@@ -15,7 +15,7 @@ BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
 #BuildRequires:	python%{pyver}dist(setuptools-scm[toml])
 BuildRequires:	python%{pyver}dist(toml)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 
 BuildArch:	noarch
 
