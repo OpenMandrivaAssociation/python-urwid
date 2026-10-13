@@ -13,7 +13,8 @@ Url: 		https://urwid.org
 BuildSystem:	python
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
-#BuildRequires:	python%{pyver}dist(setuptools-scm[toml])
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(toml)
 BuildRequires:	pkgconfig(python3)
 
@@ -37,10 +38,10 @@ useful for text console application developers including :
 * Support for UTF-8, simple 8-bit and CJK encodings
 * 256 and 88 color mode support
 
-%prep -a
-# FIXME version generation seems to be seriously broken (always resulting in 0.0.0),
-# so let's just make it what it should be
-sed -i -e 's|, "version"||;/^name =/aversion = "%{version}"' pyproject.toml
+%build -p
+# No git tag in the sdist. The old sed matched every "name =" line and
+# stored the version on the author table.
+export SETUPTOOLS_SCM_PRETEND_VERSION="%{version}"
 
 %files 
 %{py_sitedir}/*
